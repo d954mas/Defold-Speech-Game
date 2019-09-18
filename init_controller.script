@@ -4,7 +4,7 @@ local SM = require "libs.sm.sm"
 local RX = require "libs.rx"
 local SOUNDS = require "libs.sounds"
 local LEVELS = require "scenes.game.model.levels"
-
+local AskPermissionScene = require "scenes.ask_permissions.ask_permission_scene"
 local RUN_TEST = false
 
 COMMON.empty_ne("defos")
@@ -12,6 +12,7 @@ local Script = COMMON.new_n28s()
 
 local scenes = {
     require "scenes.game.game_scene",
+    AskPermissionScene
 }
 
 function Script:scenes_register()
@@ -51,7 +52,7 @@ function Script:init()
     self:scenes_register()
     self:input_init()
     if not RUN_TEST then
-        SM:show("GameScene",{level = LEVELS.LEVELS.PROTOTYPE})
+        SM:show((AskPermissionScene.have_permissions()) and "GameScene" or "AskPermissionScene",{level = LEVELS.LEVELS.PROTOTYPE})
     else
         self.test_runner = require("tests.tests") -- run tests
         self.test_runner.run()

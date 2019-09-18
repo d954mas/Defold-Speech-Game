@@ -1,6 +1,5 @@
 local COMMON = require "libs.common"
 local GOOEY = require "gooey.gooey"
-local ATLASES = require "libs.atlases_data.atlases"
 --region headers
 ---@class GooeyListItem
 ---@field root node

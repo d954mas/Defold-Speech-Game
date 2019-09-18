@@ -1,7 +1,7 @@
 [project]
-title = Game
+title = SpeechGame
 version = 0.1.0
-dependencies = https://github.com/subsoap/defos/archive/master.zip,https://github.com/dapetcu21/defold-fmod/archive/v1.0.5.zip
+dependencies = https://github.com/subsoap/defos/archive/master.zip,https://github.com/dapetcu21/defold-fmod/archive/v2.1.1.zip
 custom_resources = 
 bundle_exclude_resources = 
 bundle_resources = 
@@ -43,7 +43,7 @@ include_dirs =
 app_manifest = /app_manifest_debug.appmanifest
 
 [android]
-package = com.d954mas.dtfjam
+package = com.d954mas.speech.game
 app_icon_36x36 = /assets/mobile/app_icons/icon_36.png
 app_icon_48x48 = /assets/mobile/app_icons/icon_48.png
 app_icon_72x72 = /assets/mobile/app_icons/icon_72.png
@@ -52,6 +52,7 @@ app_icon_144x144 = /assets/mobile/app_icons/icon_144.png
 app_icon_192x192 = /assets/mobile/app_icons/icon_192.png
 gcm_sender_id = 
 push_field_text = 
+manifest = /assets/mobile/manifest/AndroidManifest.xml
 
 [graphics]
 texture_profiles = /render/my.texture_profiles
