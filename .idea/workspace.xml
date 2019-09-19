@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239b1ca6-baae-4b67-8b2c-be6a200cc995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/armv7-android/lib/armeabi-v7a/libfmod.so" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/armv7-android/lib/armeabi-v7a/libfmod.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/armv7-android/lib/armeabi-v7a/libfmodstudio.so" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/armv7-android/lib/armeabi-v7a/libfmodstudio.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86-win32/fmod.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86-win32/fmod.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86-win32/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86-win32/fmodstudio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-linux/libfmod.so" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-linux/libfmod.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-linux/libfmodstudio.so" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-linux/libfmodstudio.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-osx/Contents/MacOS/libfmod.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-osx/Contents/MacOS/libfmod.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-osx/Contents/MacOS/libfmodstudio.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-osx/Contents/MacOS/libfmodstudio.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-win32/fmod64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helpeditor/fmod/res/x86_64-win32/fmodstudio64.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adb_install.bat" beforeDir="false" afterPath="$PROJECT_DIR$/adb_install.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.project" beforeDir="false" afterPath="$PROJECT_DIR$/game.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gooey/themes/my/gooey.lua" beforeDir="false" afterPath="$PROJECT_DIR$/gooey/themes/my/gooey.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.collection" beforeDir="false" afterPath="$PROJECT_DIR$/init.collection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init_controller.script" beforeDir="false" afterPath="$PROJECT_DIR$/init_controller.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/android_permissions/src/android_permissions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/android_permissions/src/djni.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/ext.manifest_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/layout/speech_progress_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/values/strings.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scenes/ask_permissions/ask_permission_scene.lua">
+        <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="39" column="89" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
+            <state relative-caret-position="352">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -47,6 +37,7 @@
     <findStrings>
       <find>require &quot;world.</find>
       <find>ask_permission</find>
+      <find>SpeechRecognition</find>
     </findStrings>
     <replaceStrings>
       <replace>scenes.game.model.ecs</replace>
@@ -69,12 +60,16 @@
         <option value="$PROJECT_DIR$/render/my.render_script" />
         <option value="$PROJECT_DIR$/init_controller.script" />
         <option value="$PROJECT_DIR$/scenes/ask_permissions/ask_permission_scene.lua" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognition.java" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/ext.manifest" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="79" />
-    <option name="y" value="168" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="230" />
+    <option name="y" value="339" />
     <option name="width" value="1918" />
     <option name="height" value="1107" />
   </component>
@@ -94,20 +89,33 @@
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+              <item name="android_permissions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="bg" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+              <item name="android_permissions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+              <item name="speech_recognition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+              <item name="speech_recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
@@ -161,15 +169,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568840750740</updated>
-      <workItem from="1568840751946" duration="4530000" />
+      <workItem from="1568840751946" duration="8199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4530000" />
+    <option name="totallyTimeSpent" value="8199000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="168" width="1918" height="1107" extended-state="1" />
+    <frame x="230" y="339" width="1918" height="1107" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -177,11 +185,11 @@
       <window_info id="Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="LuaCheck" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32936507" />
+      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32936507" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -352,6 +360,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="39" column="89" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/android_permissions/src/PermissionsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" selection-start-column="45" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
         </state>
       </provider>
     </entry>

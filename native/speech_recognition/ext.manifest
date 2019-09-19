@@ -1,4 +1,4 @@
-name: "SpeechRecognition"
+name: "speech_recognition"
 platforms:
     x86-osx:
         context:
