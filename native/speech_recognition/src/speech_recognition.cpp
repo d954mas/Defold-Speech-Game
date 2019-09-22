@@ -30,4 +30,31 @@ void SpeechRecognition_RegisterNatives(JNIEnv* env) {
     env->RegisterNatives( jclass_SpeechRecognition , nativeMethods, sizeof(nativeMethods) / sizeof(nativeMethods[0]));    
     env->DeleteLocalRef( jclass_SpeechRecognition );
 }
+
+void SpeechRecognition_Start(){
+    JNIEnv* env = djni::env();
+    jclass cls = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+    jmethodID method = env->GetStaticMethodID(cls, "speechRecognitionStart", "()V");
+    env->CallStaticVoidMethod(cls, method);
+}
+//create speech recognition object
+void SpeechRecognition_Init(){
+    JNIEnv* env = djni::env();
+    jclass cls = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+    jmethodID method = env->GetStaticMethodID(cls, "speechRecognitionInit", "()V");
+    env->CallStaticVoidMethod(cls, method);
+}
+void SpeechRecognition_Stop(){
+    JNIEnv* env = djni::env();
+    jclass cls = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+    jmethodID method = env->GetStaticMethodID(cls, "speechRecognitionStop", "()V");
+    env->CallStaticVoidMethod(cls, method);
+}
+void SpeechRecognition_SetContinuous(bool continuous){
+    JNIEnv* env = djni::env();
+    jclass cls = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+    jmethodID method = env->GetStaticMethodID(cls, "speechRecognitionSetContinuous", "(B;)V");
+    jboolean bool_value = continuous;
+    env->CallStaticVoidMethod(cls, method,continuous);
+}
 #endif

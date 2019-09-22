@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239b1ca6-baae-4b67-8b2c-be6a200cc995" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/android_permissions/src/android_permissions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/android_permissions/src/djni.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/speech_recognition/ext.manifest_old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/layout/speech_progress_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/native/speech_recognition/res/android/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_controller.script" beforeDir="false" afterPath="$PROJECT_DIR$/init_controller.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/include/speech_recognition.h" beforeDir="false" afterPath="$PROJECT_DIR$/native/speech_recognition/include/speech_recognition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/src/native.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/speech_recognition/src/native.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp">
+        <entry file="file://$PROJECT_DIR$/init_controller.script">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="432">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -38,6 +38,7 @@
       <find>require &quot;world.</find>
       <find>ask_permission</find>
       <find>SpeechRecognition</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>scenes.game.model.ecs</replace>
@@ -58,18 +59,21 @@
         <option value="$PROJECT_DIR$/libs/sounds.lua" />
         <option value="$PROJECT_DIR$/libs/events.lua" />
         <option value="$PROJECT_DIR$/render/my.render_script" />
-        <option value="$PROJECT_DIR$/init_controller.script" />
         <option value="$PROJECT_DIR$/scenes/ask_permissions/ask_permission_scene.lua" />
         <option value="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognition.java" />
         <option value="$PROJECT_DIR$/native/speech_recognition/ext.manifest" />
         <option value="$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/include/speech_recognition.h" />
         <option value="$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp" />
+        <option value="$PROJECT_DIR$/native/speech_recognition/src/native.cpp" />
+        <option value="$PROJECT_DIR$/_headers/speech_recognition_headers.lua" />
+        <option value="$PROJECT_DIR$/init_controller.script" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="230" />
-    <option name="y" value="339" />
+    <option name="y" value="289" />
     <option name="width" value="1918" />
     <option name="height" value="1107" />
   </component>
@@ -89,6 +93,11 @@
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
+              <item name="_headers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
               <item name="native" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -109,6 +118,13 @@
               <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
               <item name="native" type="462c0819:PsiDirectoryNode" />
               <item name="speech_recognition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpeechGame" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+              <item name="speech_recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpeechGame" type="b2602c69:ProjectViewProjectNode" />
@@ -126,8 +142,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,29 +186,24 @@
       <option name="presentableId" value="Default" />
       <updated>1568840750740</updated>
       <workItem from="1568840751946" duration="8199000" />
+      <workItem from="1569183935866" duration="4241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8199000" />
+    <option name="totallyTimeSpent" value="12440000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="230" y="339" width="1918" height="1107" extended-state="0" />
+    <frame x="230" y="289" width="1918" height="1107" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25241676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="LuaCheck" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32936507" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -200,14 +211,20 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="LuaCheck" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32936507" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +251,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -288,9 +319,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_assets.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build_assets.bat" />
     <entry file="file://$PROJECT_DIR$/libs/sounds.lua">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -349,13 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init_controller.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scenes/ask_permissions/ask_permission_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -363,16 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognition.java" />
     <entry file="file://$PROJECT_DIR$/native/android_permissions/src/PermissionsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -380,10 +393,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java">
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/java/com/vikramezhil/droidspeech/DroidSpeech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/include/djni.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/android_permissions/src/android_permissions.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="106" column="135" lean-forward="true" selection-start-line="106" selection-start-column="135" selection-end-line="106" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/android_permissions/src/extension.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/android_permissions/src/PermissionRequestsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/ext.manifest">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="45" selection-start-column="45" selection-end-column="45" />
+          <caret column="25" selection-start-column="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/SpeechRecognitionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -392,8 +443,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/speech_recognition.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="387">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/include/speech_recognition.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/speech_recognition/src/native.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_headers/speech_recognition_headers.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init_controller.script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
         </state>
       </provider>
     </entry>
