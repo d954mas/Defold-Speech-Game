@@ -12,6 +12,7 @@ end
 function Scene:on_show()
     GAME_CONTROLLER:load_level(assert(self._input.level,"need level name"))
     COMMON.input_acquire()
+    speech_recognition.start()
 end
 
 function Scene:on_hide()

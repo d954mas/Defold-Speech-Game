@@ -6,6 +6,7 @@
 // include the Defold SDK
 #include <dmsdk/sdk.h>
 #include "speech_recognition.h"
+#include "speech_callback.h"
 
 #if defined(DM_PLATFORM_ANDROID)
 
@@ -44,23 +45,30 @@ static void LuaInit(lua_State* L){
 }
 
 
-dmExtension::Result InitializeMyExtension(dmExtension::Params* params) {
+static dmExtension::Result InitializeMyExtension(dmExtension::Params* params) {
     SpeechRecognition_Initialize();
+    SpeechCallback_Initialize();
     LuaInit(params->m_L);
     printf("Registered %s Extension\n", MODULE_NAME);
     return dmExtension::RESULT_OK;
 }
 
-dmExtension::Result FinalizeMyExtension(dmExtension::Params* params) {
+static dmExtension::Result FinalizeMyExtension(dmExtension::Params* params) {
     SpeechRecognition_Finalize();
+    SpeechCallback_Finalize();
+    return dmExtension::RESULT_OK;
+}
+
+static dmExtension::Result UpdateMyExtension(dmExtension::Params* params){
+    SpeechCallback_Update();
     return dmExtension::RESULT_OK;
 }
 
 #else
 
 dmExtension::Result InitializeMyExtension(dmExtension::Params* params) { return dmExtension::RESULT_OK;}
-
 dmExtension::Result FinalizeMyExtension(dmExtension::Params* params) { return dmExtension::RESULT_OK;}
+dmExtension::Result UpdateMyExtension(dmExtension::Params* params) { return dmExtension::RESULT_OK;}
 #endif
 
-DM_DECLARE_EXTENSION(EXTENSION_NAME, LIB_NAME, NULL, NULL, InitializeMyExtension, 0, 0, FinalizeMyExtension)
+DM_DECLARE_EXTENSION(EXTENSION_NAME, LIB_NAME, NULL, NULL, InitializeMyExtension, UpdateMyExtension, 0, FinalizeMyExtension)
