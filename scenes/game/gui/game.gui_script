@@ -1,0 +1,44 @@
+local COMMON = require "libs.common"
+local GOOEY = require "gooey.themes.dirtylarry.dirtylarry"
+
+local Script = COMMON.new_n28s()
+
+function Script:bind_vh()
+	self.vh = {
+		btn_speech_recognition_start = {
+			root = gui.get_node("btn_speech_recognition_start/bg"),
+			root_name = "btn_speech_recognition_start"
+		},
+		btn_speech_recognition_stop = {
+			root = gui.get_node("btn_speech_recognition_stop/bg"),
+			root_name = "btn_speech_recognition_stop"
+		},
+		lbl_speech_recognition_result = gui.get_node("lbl_speech_recognition_result")
+	}
+end
+
+function Script:init()
+	self:bind_vh()
+	COMMON.input_acquire()
+end
+
+function Script:update(dt)
+	gui.set_text(self.vh.lbl_speech_recognition_result,live_result or "")
+end
+
+function Script:final()
+	COMMON.input_release()
+end
+
+
+function Script:on_input(action_id, action)
+	GOOEY.button(self.vh.btn_speech_recognition_start.root_name,action_id,action,function (button)
+		speech_recognition.start()
+	end)
+	GOOEY.button(self.vh.btn_speech_recognition_stop.root_name,action_id,action,function (button)
+		speech_recognition.stop()
+	end)
+end
+
+
+COMMON.N28S.register(Script)

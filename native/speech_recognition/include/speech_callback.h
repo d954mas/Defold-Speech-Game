@@ -22,8 +22,13 @@ struct CallbackData{
     char* json;
 };
 
+#if defined(DM_PLATFORM_ANDROID)
+
 void SpeechCallback_Set(lua_State* L, int pos);
 void SpeechCallback_Initialize();
 void SpeechCallback_Finalize();
 void SpeechCallback_Update();
 void SpeechCallback_AddToQueue(MESSAGE_ID msg, const char*json);
+void SpeechCallback_AddToQueue(MESSAGE_ID msg, const char*json);
+
+#endif

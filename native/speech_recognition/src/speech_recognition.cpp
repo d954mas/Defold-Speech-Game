@@ -2,6 +2,7 @@
 
 #include <dmsdk/sdk.h>
 #include "speech_recognition.h"
+#include "speech_callback.h"
 
 //register callbacks from java to native
 void SpeechRecognition_Initialize() {
@@ -21,14 +22,20 @@ void SpeechRecognition_Finalize() {
 
 // TEST
 void SpeechRecognition_cb1(JNIEnv* env, jclass clz){}
+static void SpeechCallback_AddToQueueJNI(JNIEnv * env, jclass cls, jint jmsg, jstring jjson){
+    const char* json = env->GetStringUTFChars(jjson, 0);
+    SpeechCallback_AddToQueue((MESSAGE_ID)jmsg, json);
+    env->ReleaseStringUTFChars(jjson, json);
+}
 
 void SpeechRecognition_RegisterNatives(JNIEnv* env) {
-    JNINativeMethod nativeMethods[] = {
-        {"speechRecognitionCB1", "()V", (void*)&SpeechRecognition_cb1}
-    };
-	jclass jclass_SpeechRecognition = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
-    env->RegisterNatives( jclass_SpeechRecognition , nativeMethods, sizeof(nativeMethods) / sizeof(nativeMethods[0]));    
-    env->DeleteLocalRef( jclass_SpeechRecognition );
+  //  JNINativeMethod nativeMethods[] = {
+  //      {"speechCallbackAddToQueue", "()V", (void*)&SpeechCallback_AddToQueueJNI}
+  //  };
+
+	//jclass jclass_SpeechRecognition = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+   // env->RegisterNatives( jclass_SpeechRecognition , nativeMethods, sizeof(nativeMethods) / sizeof(nativeMethods[0]));
+  //  env->DeleteLocalRef( jclass_SpeechRecognition );
 }
 
 void SpeechRecognition_Start(){

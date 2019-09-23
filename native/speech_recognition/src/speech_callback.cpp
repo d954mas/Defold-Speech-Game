@@ -1,9 +1,12 @@
 #include "speech_callback.h"
+#include "djni.h"
 #include <stdlib.h>
 
 static Speech_Callback          m_callback;
 static dmArray<CallbackData>    m_callbacksQueue;
 static dmMutex::HMutex          m_mutex;
+
+#if defined(DM_PLATFORM_ANDROID)
 
 static void RegisterCallback(lua_State* L, int index){
     Speech_Callback *cbk = &m_callback;
@@ -85,8 +88,26 @@ static void invoke_callback(MESSAGE_ID type, char*json){
     assert(top == lua_gettop(L));
 }
 
+static void SpeechCallback_AddToQueueJNI(JNIEnv * env, jclass cls, jint jmsg, jstring jjson){
+    const char* json = env->GetStringUTFChars(jjson, 0);
+    SpeechCallback_AddToQueue((MESSAGE_ID)jmsg, json);
+    env->ReleaseStringUTFChars(jjson, json);
+}
+
+static void SpeechCallback_RegisterNatives(JNIEnv* env) {
+    JNINativeMethod nativeMethods[] = {
+        {"speechCallbackAddToQueue", "(ILjava/lang/String;)V", (void*)&SpeechCallback_AddToQueueJNI}
+    };
+
+	jclass jclass_SpeechRecognition = djni::GetClass(env, "com.d954mas.defold.speech.recognition.SpeechRecognitionManager");
+    env->RegisterNatives( jclass_SpeechRecognition , nativeMethods, sizeof(nativeMethods) / sizeof(nativeMethods[0]));
+    env->DeleteLocalRef( jclass_SpeechRecognition );
+}
+
 void SpeechCallback_Initialize(){
     m_mutex = dmMutex::New();
+    JNIEnv* env = djni::env();
+    SpeechCallback_RegisterNatives(env);
 }
 
 void SpeechCallback_Finalize(){
@@ -132,3 +153,5 @@ void SpeechCallback_Update(){
         m_callbacksQueue.EraseSwap(i--);
     }
 }
+
+#endif

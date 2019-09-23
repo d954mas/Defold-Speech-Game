@@ -27,11 +27,17 @@ static int Lua_SpeechRecognitionSetContinuous(lua_State* L) {
     return 0;
 }
 
+static int Lua_SpeechCallbackSet(lua_State* L) {
+    SpeechCallback_Set(L,1);
+    return 0;
+}
+
 static const luaL_reg Module_methods[] = {
     {"init", Lua_SpeechRecognitionInit},
     {"start", Lua_SpeechRecognitionStart},
     {"stop", Lua_SpeechRecognitionStop},
     {"set_continuous", Lua_SpeechRecognitionSetContinuous},
+    {"set_callback", Lua_SpeechCallbackSet},
     {0, 0}
 };
 
